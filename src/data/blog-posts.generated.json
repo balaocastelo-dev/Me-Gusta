@@ -1,10 +1,67 @@
 [
   {
+    "slug": "o-brasil-ja-e-hexa-na-gastronomia",
+    "title": "O Brasil Já É Hexa: na Gastronomia",
+    "description": "O Brasil Já É Hexa: na Gastronomia.",
+    "date": "2026-06-24",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "Forbes Brasil",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ3kwRko5WEMzMVBKRXI3TFlFWXJXSU16clEzMWg0OUhka051X0ZYa1NRRF92VVd6YkNBLWlybzZKT2h4dkpBNlF1SWRWV0MzUFpOdDlSZTJUN3VvVkFDZWFuSU1EVVVxQ01qY2h4WXY0cGw3LWRhWWExSy14aEZ3X0g2T0pZSjcwdGN1YzVsd1ZwNEFLZ0UxRl9sc0pVdEgxWTlnUmF4RG9mVzJacV9RR215Wko?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "O Brasil Já É Hexa: na Gastronomia."
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por Forbes Brasil destaca o tema \"O Brasil Já É Hexa: na Gastronomia\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "tendencias-sobremesas-casamentos",
     "title": "5 Tendências de Sobremesas que Estão Bombando em Casamentos",
     "description": "Ideias atuais de sobremesas e experiências para casamentos em Campinas e região, com foco em apresentação, fluxo e encantamento.",
     "date": "2026-06-24",
-    "tags": ["casamento", "sobremesas", "eventos"],
+    "tags": [
+      "casamento",
+      "sobremesas",
+      "eventos"
+    ],
     "category": "news",
     "isAutomated": false,
     "isMeGustaFeature": false,
@@ -67,7 +124,11 @@
     "title": "Como Calcular a Quantidade de Sorvete por Convidado (Sem Erro)",
     "description": "Um guia prático para dimensionar sobremesas em eventos: quantidade por pessoa, duração e impacto do clima.",
     "date": "2026-06-24",
-    "tags": ["planejamento", "quantidade", "eventos"],
+    "tags": [
+      "planejamento",
+      "quantidade",
+      "eventos"
+    ],
     "category": "guide",
     "isAutomated": false,
     "isMeGustaFeature": false,
@@ -106,7 +167,10 @@
     "title": "A História do Sorvete Americano: Por Que Ele Conquista Gerações?",
     "description": "Entenda de onde vem o sorvete americano e por que ele funciona tão bem em festas, casamentos e eventos corporativos.",
     "date": "2026-06-24",
-    "tags": ["curiosidades", "sorvete americano"],
+    "tags": [
+      "curiosidades",
+      "sorvete americano"
+    ],
     "category": "guide",
     "isAutomated": false,
     "isMeGustaFeature": false,
@@ -149,7 +213,11 @@
     "title": "Dicas para Organizar uma Confraternização Corporativa de Sucesso",
     "description": "Checklist de produção e experiência para empresas em Campinas e região: horários, público, logística e serviço.",
     "date": "2026-06-24",
-    "tags": ["corporativo", "B2B", "eventos"],
+    "tags": [
+      "corporativo",
+      "B2B",
+      "eventos"
+    ],
     "category": "guide",
     "isAutomated": false,
     "isMeGustaFeature": false,
@@ -188,7 +256,11 @@
     "title": "Sobremesa para Feiras e Grandes Eventos: Como Evitar Filas",
     "description": "Estratégias para alto volume de atendimento em feiras, lançamentos e eventos com grande circulação em Campinas e RMC.",
     "date": "2026-06-24",
-    "tags": ["feiras", "grandes eventos", "fluxo"],
+    "tags": [
+      "feiras",
+      "grandes eventos",
+      "fluxo"
+    ],
     "category": "news",
     "isAutomated": false,
     "isMeGustaFeature": false,
@@ -227,7 +299,11 @@
     "title": "Por Que a Máquina da Me Gusta é o Sucesso que Falta no Seu Próximo Evento",
     "description": "O que diferencia o serviço: máquina + operador uniformizado, visual em LED, sorvete alcoólico e prova social em Campinas e região.",
     "date": "2026-06-24",
-    "tags": ["conversão", "aluguel", "Campinas"],
+    "tags": [
+      "conversão",
+      "aluguel",
+      "Campinas"
+    ],
     "category": "me-gusta",
     "isAutomated": false,
     "isMeGustaFeature": true,

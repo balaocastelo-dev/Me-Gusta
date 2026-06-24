@@ -5,7 +5,7 @@ import { getSortedBlogPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Blog da Me Gusta com dicas de eventos, sobremesas e tendências para casamentos, aniversários e eventos corporativos em Campinas e região.",
+    "Blog da Me Gusta com notícias e tendências do universo gastronômico, sobremesas e referências para eventos em Campinas e região.",
 };
 
 export default function BlogIndexPage() {
@@ -24,11 +24,11 @@ export default function BlogIndexPage() {
           Blog Me Gusta
         </h1>
         <p className="mt-3 max-w-2xl text-[color:rgba(31,20,15,0.78)]">
-          Conteúdo prático sobre sobremesas e eventos em Campinas e Região Metropolitana:
-          planejamento, tendências e dicas para aumentar a experiência dos convidados.
+          Notícias, tendências e referências do universo gastronômico para quem quer
+          descobrir novidades, inspirações e ideias para tornar o evento ainda mais especial.
         </p>
         <div className="mt-5 inline-flex rounded-full bg-[rgba(110,63,167,0.12)] px-4 py-2 text-xs font-extrabold text-[var(--mg-brown)]">
-          Conteúdo editorial + automação com agente de IA
+          Atualização automática por RSS gastronômico
         </div>
       </header>
 
@@ -50,7 +50,7 @@ export default function BlogIndexPage() {
                 </span>
                 {post.isAutomated ? (
                   <span className="rounded-full bg-[rgba(78,197,106,0.16)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
-                    IA
+                    RSS
                   </span>
                 ) : null}
               </div>

@@ -28,11 +28,7 @@ jobs:
       - name: Run blog agent
         env:
           NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
-          BLOG_AGENT_API_KEY: ${{ secrets.BLOG_AGENT_API_KEY }}
-          BLOG_AGENT_BASE_URL: ${{ vars.BLOG_AGENT_BASE_URL }}
-          BLOG_AGENT_MODEL: ${{ vars.BLOG_AGENT_MODEL }}
           BLOG_AGENT_NEWS_FEEDS: ${{ vars.BLOG_AGENT_NEWS_FEEDS }}
-          ME_GUSTA_REFERENCE_NOTES: ${{ vars.ME_GUSTA_REFERENCE_NOTES }}
         run: npm run blog:generate
 
       - name: Commit and push if changed

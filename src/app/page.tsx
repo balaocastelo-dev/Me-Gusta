@@ -277,11 +277,11 @@ export default function Home() {
               <div className="grid gap-4 rounded-[30px] border border-[var(--mg-border)] bg-white/90 p-6 shadow-[var(--mg-shadow)] md:grid-cols-2">
                 <div>
                   <div className="text-sm font-extrabold text-[var(--mg-brown)]">
-                    Por que a Me Gusta converte tão bem?
+                    Por que tantos clientes escolhem a Me Gusta?
                   </div>
                   <div className="mt-2 text-sm leading-7 text-[color:rgba(31,20,15,0.78)]">
-                    Porque junta três gatilhos fortes ao mesmo tempo: qualidade percebida,
-                    apresentação premium e operação organizada.
+                    Porque entrega sabor, presença visual e atendimento organizado no
+                    mesmo serviço, deixando o evento mais bonito e mais memorável.
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -370,7 +370,7 @@ export default function Home() {
           <SectionHeading
             badge="Tipos de evento"
             title="Uma atração que encaixa em vários formatos sem parecer repetida"
-            description="A Me Gusta funciona porque não entra no evento como mais um fornecedor. Ela entra como experiência. Em casamento, ela parece sofisticada. Em aniversário, parece divertida. Em corporativo, parece inteligente."
+            description="Em casamentos, aniversários, eventos corporativos, buffets e grandes produções, a Me Gusta combina apresentação elegante, atendimento rápido e um momento de sobremesa que chama atenção."
           />
 
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
@@ -434,7 +434,7 @@ export default function Home() {
           <SectionHeading
             badge="Feed, reels e autoridade"
             title="Conteúdo real de eventos, com fotos, vídeo e prova social"
-            description="A home agora trabalha como um mini show-room da marca: fotos grandes, reviews visíveis, referências do Instagram e mais contexto para convencer quem chegou por anúncio, Google ou IA."
+            description="Veja fotos, vídeos e comentários reais de quem já contratou a Me Gusta para festas, casamentos, eventos corporativos e grandes celebrações."
           />
 
           <div className="mt-8 grid gap-5 xl:grid-cols-[0.95fr_2.05fr]">
@@ -444,12 +444,12 @@ export default function Home() {
                   Destaques das redes
                 </div>
                 <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[var(--mg-brown)]">
-                  Barba Azul, Anão, ativações e momentos que fazem o feed trabalhar a favor da venda
+                  Eventos especiais, ativações e momentos que mostram a experiência Me Gusta ao vivo
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-[color:rgba(31,20,15,0.78)]">
-                  Em vez de esconder a prova social em links, a página já mostra que a Me
-                  Gusta tem presença, repertório visual e capacidade de entregar uma
-                  atração realmente memorável.
+                  Aqui você encontra uma amostra real do que os convidados veem no dia do
+                  evento: visual marcante, atendimento caprichado e um serviço que vira
+                  assunto entre os presentes.
                 </p>
                 <div className="mt-5 grid gap-3">
                   {signals.instagramReels.map((reel) => (
@@ -515,8 +515,8 @@ export default function Home() {
             <div className="rounded-[32px] border border-[var(--mg-border)] bg-white p-7 shadow-[var(--mg-shadow)]">
               <SectionHeading
                 badge="Preços e regras"
-                title="Lead qualificado compra mais rápido"
-                description="O preço entra como ferramenta de confiança. Quem se encaixa já chega pronto para avançar. Quem está fora do perfil entende isso sem gerar ruído no atendimento."
+                title="Valores claros para você planejar com segurança"
+                description="Com regras transparentes e atendimento objetivo, fica mais fácil entender o investimento e pedir um orçamento alinhado ao seu evento."
               />
 
               <div className="mt-8 grid gap-4">
@@ -548,8 +548,8 @@ export default function Home() {
             <div className="rounded-[32px] border border-[var(--mg-border)] bg-white p-6 shadow-[var(--mg-shadow)] md:p-8">
               <SectionHeading
                 badge="Google + comentários"
-                title="Prova social que reduz objeção na hora"
-                description="A página ganhou mais conteúdo útil para quem compara fornecedores: comentários visíveis, contexto e sinais de qualidade real."
+                title="Avaliações que reforçam confiança na escolha"
+                description="Quem já contratou destaca sabor, atendimento e o impacto visual da máquina no evento. É o tipo de detalhe que ajuda na decisão."
               />
 
               <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -584,10 +584,10 @@ export default function Home() {
 
             <div className="rounded-[32px] border border-[var(--mg-border)] bg-[linear-gradient(135deg,#ffffff,var(--mg-cream-2))] p-7 shadow-[var(--mg-shadow)]">
               <div className="text-xs font-extrabold uppercase tracking-[0.18em] text-[var(--mg-pink)]">
-                Diferenciais competitivos
+                Diferenciais
               </div>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[var(--mg-brown)]">
-                Bonito, chamativo e feito para parecer premium em qualquer tela
+                Um serviço pensado para impressionar do começo ao fim
               </h2>
               <div className="mt-5 grid gap-4">
                 {[
@@ -612,9 +612,9 @@ export default function Home() {
         <section id="faq" className="mx-auto w-full max-w-[1720px] px-5 pb-16 2xl:px-10">
           <div className="rounded-[32px] border border-[var(--mg-border)] bg-white p-6 shadow-[var(--mg-shadow)] md:p-10">
             <SectionHeading
-              badge="FAQ para Google e IA"
-              title="Respostas claras, indexáveis e úteis"
-              description="Esta seção ajuda o Google, o ChatGPT, o Gemini e o Claude a entenderem preço, região atendida, diferenciais e modelo de operação da Me Gusta."
+              badge="Perguntas frequentes"
+              title="Tire suas dúvidas antes de pedir o orçamento"
+              description="Confira as respostas mais buscadas sobre atendimento, valores, deslocamento e diferenciais do serviço."
             />
 
             <div className="mt-8 grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
@@ -640,16 +640,15 @@ export default function Home() {
             <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
               <div>
                 <div className="inline-flex rounded-full bg-[rgba(110,63,167,0.12)] px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
-                  Blog automatizado
+                  Blog de notícias gastronômicas
                 </div>
                 <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[var(--mg-brown)] md:text-4xl">
-                  Conteúdo com agente de IA para manter o site vivo e relevante
+                  Tendências, novidades e referências do mundo da gastronomia
                 </h2>
                 <p className="mt-3 max-w-4xl text-sm leading-7 text-[color:rgba(31,20,15,0.78)]">
-                  O blog passa a suportar automação editorial: o agente busca notícias e
-                  sinais do universo de eventos e gastronomia e, a cada 5 publicações
-                  informativas, gera 1 publicação própria da Me Gusta usando referências
-                  de Instagram e comentários do Google.
+                  O blog reúne notícias e atualizações do universo gastronômico para quem
+                  gosta de acompanhar tendências, sobremesas, consumo e novidades que
+                  inspiram experiências mais especiais.
                 </p>
               </div>
 
@@ -678,7 +677,7 @@ export default function Home() {
                     </span>
                     {post.isAutomated ? (
                       <span className="rounded-full bg-[rgba(78,197,106,0.16)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
-                        IA
+                        RSS
                       </span>
                     ) : null}
                   </div>

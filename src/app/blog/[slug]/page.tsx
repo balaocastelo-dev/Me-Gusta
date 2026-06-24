@@ -83,7 +83,7 @@ export default function BlogPostPage({
           </span>
           {post.isAutomated ? (
             <span className="rounded-full bg-[rgba(78,197,106,0.16)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
-              Gerado com IA
+              Atualizado por RSS
             </span>
           ) : null}
         </div>

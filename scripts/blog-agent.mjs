@@ -4,7 +4,6 @@ import process from "node:process";
 
 const rootDir = process.cwd();
 const postsPath = path.join(rootDir, "src", "data", "blog-posts.generated.json");
-const signalsPath = path.join(rootDir, "src", "data", "me-gusta-signals.json");
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://me-gusta-seven.vercel.app").replace(
   /\/$/,
   ""
@@ -12,9 +11,9 @@ const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://me-gusta-seven.ver
 const dryRun = process.argv.includes("--dry-run");
 
 const defaultFeeds = [
-  "https://news.google.com/rss/search?q=eventos+gastronomia+casamentos+buffet+Brasil&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-  "https://news.google.com/rss/search?q=tend%C3%AAncias+de+eventos+Brasil&hl=pt-BR&gl=BR&ceid=BR:pt-419",
-  "https://news.google.com/rss/search?q=mercado+de+casamentos+Brasil&hl=pt-BR&gl=BR&ceid=BR:pt-419"
+  "https://news.google.com/rss/search?q=gastronomia+Brasil&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "https://news.google.com/rss/search?q=tendencias+gastronomia+restaurantes+Brasil&hl=pt-BR&gl=BR&ceid=BR:pt-419",
+  "https://news.google.com/rss/search?q=sobremesas+gastronomia+Brasil&hl=pt-BR&gl=BR&ceid=BR:pt-419"
 ];
 
 main().catch((error) => {
@@ -23,23 +22,10 @@ main().catch((error) => {
 });
 
 async function main() {
-  const [posts, signals] = await Promise.all([
-    readJson(postsPath),
-    readJson(signalsPath),
-  ]);
-
-  const recentPosts = posts.slice(0, 8);
-  const postsSinceFeature = countPostsSinceLastFeature(posts);
-  const shouldCreateMeGustaFeature = postsSinceFeature >= 5;
+  const posts = await readJson(postsPath);
   const feedUrls = getFeedUrls();
   const newsItems = await collectNewsItems(feedUrls);
-
-  const generated = await createPost({
-    newsItems,
-    recentPosts,
-    signals,
-    shouldCreateMeGustaFeature,
-  });
+  const generated = createPostFromRss(newsItems, posts);
 
   const normalized = normalizeGeneratedPost(generated, posts);
 
@@ -52,245 +38,128 @@ async function main() {
   await writeFile(postsPath, `${JSON.stringify(nextPosts, null, 2)}\n`, "utf8");
 
   console.log(
-    `Novo post ${normalized.isMeGustaFeature ? "Me Gusta" : "editorial"} salvo em ${postsPath}`
+    `Novo post RSS salvo em ${postsPath}`
   );
 }
 
-async function createPost({ newsItems, recentPosts, signals, shouldCreateMeGustaFeature }) {
-  const aiPost = await tryGenerateWithAi({
-    newsItems,
-    recentPosts,
-    signals,
-    shouldCreateMeGustaFeature,
-  });
-
-  if (aiPost) return aiPost;
-
-  return shouldCreateMeGustaFeature
-    ? createFallbackMeGustaPost(signals)
-    : createFallbackNewsPost(newsItems);
-}
-
-async function tryGenerateWithAi(context) {
-  const apiKey = process.env.BLOG_AGENT_API_KEY ?? process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-
-  const baseUrl = (process.env.BLOG_AGENT_BASE_URL ?? process.env.OPENAI_BASE_URL ?? "https://api.openai.com/v1").replace(
-    /\/$/,
-    ""
+function createPostFromRss(newsItems, existingPosts) {
+  const existingSourceUrls = new Set(
+    existingPosts.flatMap((post) => post.sources?.map((source) => source.url) ?? [])
   );
-  const model = process.env.BLOG_AGENT_MODEL ?? "gpt-4.1-mini";
+  const candidate = newsItems.find((item) => !existingSourceUrls.has(item.url));
 
-  const prompt = buildPrompt(context);
-  const response = await fetch(`${baseUrl}/chat/completions`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model,
-      temperature: 0.8,
-      response_format: { type: "json_object" },
-      messages: [
-        {
-          role: "system",
-          content:
-            "Voce e um agente editorial para um blog de eventos e gastronomia. Retorne apenas JSON valido, em pt-BR, com foco em SEO, clareza e utilidade pratica.",
-        },
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-    }),
-  });
-
-  if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Falha ao gerar conteudo com IA: ${response.status} ${errorText}`);
+  if (!candidate) {
+    return createFallbackNewsPost();
   }
 
-  const data = await response.json();
-  const content = data?.choices?.[0]?.message?.content;
-  if (!content) return null;
-
-  return JSON.parse(content);
-}
-
-function buildPrompt({ newsItems, recentPosts, signals, shouldCreateMeGustaFeature }) {
-  const externalSignals = getExtraMeGustaNotes();
-  const recentTitles = recentPosts.map((post) => `- ${post.title}`).join("\n");
-  const newsSummary = newsItems
-    .slice(0, 8)
-    .map((item, index) => `${index + 1}. ${item.title} | ${item.url}`)
-    .join("\n");
-  const reviewSummary = (signals.googleReviews ?? [])
-    .map((review) => `- ${review.author}: ${review.quote}`)
-    .join("\n");
-  const reelSummary = (signals.instagramReels ?? [])
-    .map((reel) => `- ${reel.title}: ${reel.url}`)
-    .join("\n");
-  const noteSummary = [...(signals.meGustaReferenceNotes ?? []), ...externalSignals]
-    .map((note) => `- ${note}`)
-    .join("\n");
-
-  return `Crie UM novo post para o blog da Me Gusta.
-
-Objetivo:
-- O blog alterna 5 publicacoes editoriais/informativas sobre eventos e gastronomia com 1 publicacao proprietaria da Me Gusta.
-- Nesta execucao, o tipo obrigatorio e: ${shouldCreateMeGustaFeature ? "post proprietario da Me Gusta" : "post informativo/editorial"}.
-
-Regras:
-- Nao repita titulos recentes.
-- Foco em SEO para Campinas, eventos, gastronomia, casamentos, festas, corporativo e feiras.
-- Tom humano, comercial apenas quando fizer sentido.
-- Entregue JSON com as chaves:
-  slug, title, description, date, tags, category, isAutomated, isMeGustaFeature, featuredImage, sources, content
-- "category" deve ser "news", "guide" ou "me-gusta"
-- "content" deve ser array com blocos { type: "p" | "h2" | "ul", text?, items? }
-- Minimo: 5 blocos.
-- "sources" deve ter pelo menos 1 item com title e url.
-- "featuredImage" deve ser um destes caminhos:
-  /media/maquina-sorvete-led-casamento-campinas.webp
-  /media/maquina-sorvete-operador-uniformizado-campinas.webp
-  /media/sorvete-americano-pistache-evento-campinas.webp
-  /media/sorvete-americano-festa-15-anos-campinas.webp
-  /media/maquina-sorvete-feira-evento-grande-campinas.webp
-- Use data de hoje: ${new Date().toISOString().slice(0, 10)}
-
-Titulos recentes para evitar:
-${recentTitles}
-
-Noticias e sinais editoriais recentes:
-${newsSummary || "- Sem noticias externas disponiveis"}
-
-Referencias Me Gusta:
-Google reviews:
-${reviewSummary}
-
-Instagram:
-${reelSummary}
-
-Notas e diferenciais:
-${noteSummary}
-`;
-}
-
-function createFallbackNewsPost(newsItems) {
-  const [primary, secondary] = newsItems;
-  const primaryTitle = primary?.title ?? "Tendencias de sobremesas e experiencias para eventos";
-  const secondaryTitle = secondary?.title ?? "Mudancas no mercado de eventos e gastronomia";
-  const today = new Date().toISOString().slice(0, 10);
+  const today = toDateOnly(candidate.pubDate) ?? new Date().toISOString().slice(0, 10);
+  const cleanTitle = cleanupTitle(candidate.title) || "Notícia de gastronomia";
+  const sourceName = detectSource(candidate) || "RSS de gastronomia";
+  const excerpt = cleanupExcerpt(candidate.description || candidate.summary, sourceName);
+  const intro = excerpt
+    ? excerpt
+    : "O blog da Me Gusta acompanha novidades do universo gastronômico para trazer ideias, tendências e referências atuais.";
 
   return {
-    slug: slugify(`insights-de-eventos-e-gastronomia-${today}`),
-    title: "O Que Esta em Alta em Eventos e Gastronomia Agora",
-    description:
-      "Um resumo pratico das novidades mais recentes do mercado de eventos, casamentos e gastronomia, com leitura util para quem produz em Campinas e regiao.",
+    slug: slugify(cleanTitle),
+    title: cleanTitle,
+    description: truncate(
+      excerpt ||
+        `Confira uma novidade do mercado gastronômico publicada por ${sourceName} e veja como essa tendência pode inspirar experiências mais marcantes.`,
+      180
+    ),
     date: today,
-    tags: ["eventos", "gastronomia", "tendencias", "Campinas"],
+    tags: extractTags(cleanTitle, excerpt),
     category: "news",
     isAutomated: true,
     isMeGustaFeature: false,
-    featuredImage: "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
+    featuredImage: pickFeaturedImage(cleanTitle),
     sources: [
-      ...(primary ? [{ title: primary.title, url: primary.url }] : []),
-      ...(secondary ? [{ title: secondary.title, url: secondary.url }] : []),
+      {
+        title: sourceName,
+        url: candidate.url,
+      },
     ],
     content: [
       {
         type: "p",
-        text: "O mercado de eventos e gastronomia muda rapido, e acompanhar os sinais certos ajuda produtores, buffets e marcas a criarem experiencias mais fortes para o publico."
+        text: intro,
       },
       {
         type: "h2",
-        text: "Sinal 1: experiencias visuais vendem mais"
+        text: "O que está acontecendo"
       },
       {
         type: "p",
-        text: `Entre os temas recentes, chama atencao o crescimento de formatos com forte impacto visual e compartilhamento social. Um dos destaques observados foi: ${primaryTitle}.`
+        text: `A notícia publicada por ${sourceName} destaca o tema "${cleanTitle}".`,
       },
       {
         type: "h2",
-        text: "Sinal 2: operacao simples ganha valor"
+        text: "Por que essa novidade chama atenção"
       },
       {
         type: "p",
-        text: `Outro ponto recorrente e a busca por solucoes praticas, com atendimento rapido e menos gargalos na fila. Isso aparece tambem em: ${secondaryTitle}.`
+        text: buildValueAngle(cleanTitle, excerpt),
       },
       {
         type: "h2",
-        text: "Como aplicar em Campinas e regiao"
+        text: "Como essa tendência pode inspirar experiências mais especiais"
       },
       {
         type: "ul",
         items: [
-          "Escolha atracoes que combinam experiencia, foto e fluxo rapido.",
-          "Priorize servicos com equipe preparada e apresentacao impecavel.",
-          "Adapte o menu ao perfil do publico e ao horario de consumo."
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
         ]
       }
-    ]
+    ],
   };
 }
 
-function createFallbackMeGustaPost(signals) {
+function createFallbackNewsPost() {
   const today = new Date().toISOString().slice(0, 10);
-  const review = signals.googleReviews?.[0];
-  const reel = signals.instagramReels?.[0];
 
   return {
-    slug: slugify(`me-gusta-em-foco-${today}`),
-    title: "Por Que a Me Gusta Continua Sendo Assunto nos Eventos de Campinas",
+    slug: slugify(`noticias-de-gastronomia-${today}`),
+    title: "Notícias e Tendências da Gastronomia em Destaque",
     description:
-      "A combinacao entre atendimento, visual da maquina, operador uniformizado e prova social faz da Me Gusta uma escolha forte para festas, casamentos e eventos corporativos.",
+      "Atualização automática com notícias e tendências do universo gastronômico, reunindo temas que inspiram experiências mais marcantes.",
     date: today,
-    tags: ["Me Gusta", "Campinas", "casamento", "evento corporativo"],
-    category: "me-gusta",
+    tags: ["gastronomia", "tendências", "sobremesas", "mercado"],
+    category: "news",
     isAutomated: true,
-    isMeGustaFeature: true,
-    featuredImage: "/media/maquina-sorvete-led-casamento-campinas.webp",
-    sources: [
-      {
-        title: reel?.title ?? "Instagram Me Gusta",
-        url: reel?.url ?? "https://www.instagram.com/megustasorveteamericano/"
-      },
-      {
-        title: "Google Business Me Gusta",
-        url: "https://share.google/668woTCo8D3MrTbg3"
-      }
-    ],
+    isMeGustaFeature: false,
+    featuredImage: "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
+    sources: [{ title: "RSS de gastronomia", url: siteUrl }],
     content: [
       {
         type: "p",
-        text: "Em eventos, o que marca nao e apenas o sabor. E a experiencia completa. E por isso que a Me Gusta continua aparecendo como uma das atracoes mais lembradas em Campinas e regiao."
+        text: "O blog da Me Gusta acompanha automaticamente fontes de notícias gastronômicas para destacar novidades que influenciam sabor, apresentação e experiência."
       },
       {
         type: "h2",
-        text: "Atendimento que transmite confianca"
+        text: "Acompanhamento contínuo do setor"
       },
       {
         type: "p",
-        text: "O servico inclui obrigatoriamente a maquina e um funcionario uniformizado. Isso melhora o fluxo, preserva o padrao e passa mais seguranca para quem esta organizando."
+        text: "Quando o feed não retorna uma notícia nova no momento da atualização, a página mantém um post informativo de apoio até a próxima captura automática."
       },
       {
         type: "h2",
-        text: "Visual que vira conteudo"
+        text: "Foco do conteúdo"
       },
       {
         type: "p",
-        text: "A maquina com LED cria um ponto instagramavel no evento e ajuda a transformar sobremesa em experiencia. Isso aparece com frequencia nos posts e reels da marca."
+        text: "As atualizações priorizam gastronomia, sobremesas, mercado food, tendências de consumo e referências que ajudam a compor eventos mais interessantes."
       },
       {
-        type: "h2",
-        text: "O que o publico comenta"
-      },
-      {
-        type: "p",
-        text: review
-          ? `${review.author} resumiu bem a percepcao geral: "${review.quote}"`
-          : "As avaliacoes publicas reforcam qualidade, atendimento e impacto visual no evento."
+        type: "ul",
+        items: [
+          "Novidades do setor gastronômico.",
+          "Tendências de sobremesas e consumo.",
+          "Referências úteis para festas, casamentos e eventos."
+        ]
       }
     ]
   };
@@ -313,19 +182,19 @@ function normalizeGeneratedPost(post, existingPosts) {
     description: post.description?.trim() || "Conteudo automatizado do blog Me Gusta.",
     date: post.date || new Date().toISOString().slice(0, 10),
     tags: Array.isArray(post.tags) && post.tags.length ? post.tags.slice(0, 8) : ["eventos", "Campinas"],
-    category: post.category === "me-gusta" ? "me-gusta" : post.category === "guide" ? "guide" : "news",
+    category: "news",
     isAutomated: true,
-    isMeGustaFeature: Boolean(post.isMeGustaFeature || post.category === "me-gusta"),
+    isMeGustaFeature: false,
     featuredImage: sanitizeFeaturedImage(post.featuredImage),
     sources: Array.isArray(post.sources) && post.sources.length
       ? post.sources.map((source) => ({
           title: String(source.title || "Fonte"),
           url: String(source.url || siteUrl),
         }))
-      : [{ title: "Me Gusta", url: siteUrl }],
+      : [{ title: "RSS de gastronomia", url: siteUrl }],
     content: Array.isArray(post.content) && post.content.length
       ? post.content.map(normalizeBlock).filter(Boolean)
-      : [{ type: "p", text: "Conteudo automatizado indisponivel." }],
+      : [{ type: "p", text: "Atualização automática do blog indisponível no momento." }],
   };
 }
 
@@ -355,15 +224,6 @@ function sanitizeFeaturedImage(image) {
   return allowed.has(image)
     ? image
     : "/media/maquina-sorvete-led-casamento-campinas.webp";
-}
-
-function countPostsSinceLastFeature(posts) {
-  let count = 0;
-  for (const post of posts) {
-    if (post.isMeGustaFeature) break;
-    count += 1;
-  }
-  return count;
 }
 
 async function collectNewsItems(feedUrls) {
@@ -397,6 +257,10 @@ async function fetchRssItems(url) {
   return chunks.slice(0, 6).map((chunk) => ({
     title: decodeHtml(extractXmlValue(chunk, "title")),
     url: decodeHtml(extractXmlValue(chunk, "link")),
+    description: stripHtml(decodeHtml(extractXmlValue(chunk, "description"))),
+    summary: stripHtml(decodeHtml(extractXmlValue(chunk, "content:encoded"))),
+    pubDate: decodeHtml(extractXmlValue(chunk, "pubDate")),
+    source: decodeHtml(extractXmlValue(chunk, "source")) || extractChannelFromUrl(url),
   }));
 }
 
@@ -408,6 +272,7 @@ function extractXmlValue(chunk, tag) {
 function decodeHtml(value) {
   return value
     .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
@@ -424,13 +289,6 @@ function getFeedUrls() {
     .filter(Boolean);
 }
 
-function getExtraMeGustaNotes() {
-  return (process.env.ME_GUSTA_REFERENCE_NOTES ?? "")
-    .split("\n")
-    .map((item) => item.trim())
-    .filter(Boolean);
-}
-
 function slugify(value) {
   return String(value)
     .normalize("NFD")
@@ -443,4 +301,104 @@ function slugify(value) {
 async function readJson(filePath) {
   const raw = await readFile(filePath, "utf8");
   return JSON.parse(raw);
+}
+
+function stripHtml(value) {
+  return value
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function sanitizeText(value) {
+  return String(value ?? "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function cleanupTitle(value) {
+  return sanitizeText(String(value ?? "").replace(/\s*-\s*[^-]+$/, ""));
+}
+
+function cleanupExcerpt(value, sourceName) {
+  const text = sanitizeText(value);
+  if (!text) return "";
+  return text
+    .replace(new RegExp(`${escapeRegExp(sourceName)}$`), "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function truncate(value, maxLength) {
+  if (value.length <= maxLength) return value;
+  return `${value.slice(0, maxLength - 1).trim()}...`;
+}
+
+function extractTags(title, description) {
+  const haystack = `${title} ${description ?? ""}`.toLowerCase();
+  const tags = ["gastronomia"];
+
+  if (haystack.includes("sobremesa") || haystack.includes("doce")) tags.push("sobremesas");
+  if (haystack.includes("restaurante")) tags.push("restaurantes");
+  if (haystack.includes("mercado")) tags.push("mercado");
+  if (haystack.includes("tend")) tags.push("tendências");
+  if (haystack.includes("consumo")) tags.push("consumo");
+
+  return [...new Set(tags)].slice(0, 5);
+}
+
+function pickFeaturedImage(title) {
+  const text = title.toLowerCase();
+
+  if (text.includes("sobremesa") || text.includes("sorvete") || text.includes("doce")) {
+    return "/media/sorvete-americano-pistache-evento-campinas.webp";
+  }
+
+  if (text.includes("feira") || text.includes("evento")) {
+    return "/media/maquina-sorvete-feira-evento-grande-campinas.webp";
+  }
+
+  return "/media/maquina-sorvete-led-casamento-campinas.webp";
+}
+
+function buildValueAngle(title, excerpt) {
+  if (excerpt) {
+    return truncate(
+      `${excerpt} Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação.`,
+      340
+    );
+  }
+
+  return `O tema "${title}" reforça como o setor gastronômico está cada vez mais ligado à experiência, ao desejo e ao impacto visual.`;
+}
+
+function toDateOnly(value) {
+  const parsed = value ? new Date(value) : null;
+  if (!parsed || Number.isNaN(parsed.getTime())) return null;
+  return parsed.toISOString().slice(0, 10);
+}
+
+function extractChannelFromUrl(url) {
+  try {
+    const hostname = new URL(url).hostname.replace(/^www\./, "");
+    return hostname;
+  } catch {
+    return "RSS de gastronomia";
+  }
+}
+
+function detectSource(item) {
+  const explicit = sanitizeText(item.source);
+  if (explicit && explicit !== "news.google.com") return explicit;
+
+  const title = sanitizeText(item.title);
+  const parts = title.split(" - ").map((part) => part.trim()).filter(Boolean);
+  if (parts.length > 1) return parts.at(-1);
+
+  return explicit || extractChannelFromUrl(item.url);
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
