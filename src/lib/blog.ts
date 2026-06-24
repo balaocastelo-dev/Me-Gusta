@@ -1,193 +1,46 @@
+import generatedPosts from "@/data/blog-posts.generated.json";
+
+export type BlogContentBlock = {
+  type: "p" | "h2" | "ul";
+  text?: string;
+  items?: string[];
+};
+
+export type BlogSource = {
+  title: string;
+  url: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
   description: string;
   date: string;
   tags: string[];
-  content: Array<{ type: "p" | "h2" | "ul"; text?: string; items?: string[] }>;
+  category: "news" | "guide" | "me-gusta";
+  isAutomated: boolean;
+  isMeGustaFeature: boolean;
+  featuredImage: string;
+  sources: BlogSource[];
+  content: BlogContentBlock[];
 };
 
-export const blogPosts: BlogPost[] = [
-  {
-    slug: "tendencias-sobremesas-casamentos",
-    title: "5 Tendências de Sobremesas que Estão Bombando em Casamentos",
-    description:
-      "Ideias atuais de sobremesas e experiências para casamentos em Campinas e região, com foco em apresentação, fluxo e encantamento.",
-    date: "2026-06-24",
-    tags: ["casamento", "sobremesas", "eventos"],
-    content: [
-      {
-        type: "p",
-        text: "Casamentos em Campinas e na RMC estão cada vez mais focados em experiências. A sobremesa deixou de ser só “o doce final” e virou um momento do evento.",
-      },
-      { type: "h2", text: "1) Estações ao vivo" },
-      {
-        type: "p",
-        text: "Serviços com preparo e montagem na hora aumentam o engajamento e ajudam no fluxo do buffet.",
-      },
-      { type: "h2", text: "2) Visual instagramável" },
-      {
-        type: "p",
-        text: "Iluminação, cores e um ponto fotogênico fazem os convidados compartilharem o evento naturalmente.",
-      },
-      { type: "h2", text: "3) Sobremesas leves" },
-      {
-        type: "p",
-        text: "Opções geladas e menos enjoativas funcionam muito bem depois do jantar, principalmente em dias quentes.",
-      },
-      { type: "h2", text: "4) Experiências personalizadas" },
-      {
-        type: "p",
-        text: "Personalização com sabores, coberturas e apresentação cria assinatura do casal sem complicar a operação.",
-      },
-      { type: "h2", text: "5) Logística inteligente" },
-      {
-        type: "p",
-        text: "Mais do que a sobremesa, o que faz o serviço funcionar é ter equipe treinada para atender rápido, com padrão e sem bagunça.",
-      },
-    ],
-  },
-  {
-    slug: "como-calcular-sorvete-por-convidado",
-    title: "Como Calcular a Quantidade de Sorvete por Convidado (Sem Erro)",
-    description:
-      "Um guia prático para dimensionar sobremesas em eventos: quantidade por pessoa, duração e impacto do clima.",
-    date: "2026-06-24",
-    tags: ["planejamento", "quantidade", "eventos"],
-    content: [
-      {
-        type: "p",
-        text: "A conta de “quanto sorvete preciso” depende de três fatores: perfil do público, horário da sobremesa e clima. Em Campinas, eventos ao ar livre aumentam o consumo.",
-      },
-      { type: "h2", text: "Três perguntas que resolvem a conta" },
-      {
-        type: "ul",
-        items: [
-          "O evento é infantil, adulto ou misto?",
-          "A sobremesa acontece após o jantar ou durante todo o evento?",
-          "É em local aberto, fechado ou com muito calor?",
-        ],
-      },
-      {
-        type: "p",
-        text: "A melhor estratégia é oferecer um serviço com reposição contínua e atendimento ágil, para evitar falta e também evitar desperdício.",
-      },
-    ],
-  },
-  {
-    slug: "historia-do-sorvete-americano",
-    title: "A História do Sorvete Americano: Por Que Ele Conquista Gerações?",
-    description:
-      "Entenda de onde vem o sorvete americano e por que ele funciona tão bem em festas, casamentos e eventos corporativos.",
-    date: "2026-06-24",
-    tags: ["curiosidades", "sorvete americano"],
-    content: [
-      {
-        type: "p",
-        text: "O sorvete americano é conhecido pela textura cremosa e pelo serviço rápido. Em eventos, isso vira vantagem: fila anda, convidados repetem e todo mundo participa do momento.",
-      },
-      { type: "h2", text: "Textura e consistência" },
-      {
-        type: "p",
-        text: "A cremosidade e o ponto de serviço são parte do encanto. Um bom equipamento mantém a qualidade por horas.",
-      },
-      { type: "h2", text: "Por que é perfeito para eventos" },
-      {
-        type: "ul",
-        items: [
-          "Atendimento rápido",
-          "Agradável para crianças e adultos",
-          "Combina com coberturas e personalizações",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "confraternizacao-corporativa-sucesso",
-    title: "Dicas para Organizar uma Confraternização Corporativa de Sucesso",
-    description:
-      "Checklist de produção e experiência para empresas em Campinas e região: horários, público, logística e serviço.",
-    date: "2026-06-24",
-    tags: ["corporativo", "B2B", "eventos"],
-    content: [
-      {
-        type: "p",
-        text: "Confraternização corporativa boa é aquela que flui: sem filas, com serviço consistente e com algo marcante para a equipe lembrar.",
-      },
-      { type: "h2", text: "Checklist rápido" },
-      {
-        type: "ul",
-        items: [
-          "Defina o pico de consumo (após palestra, após almoço, após cerimônia).",
-          "Garanta ponto de energia e área de atendimento segura.",
-          "Escolha uma atração “fácil de amar” (sobremesa gelada costuma ser sucesso).",
-        ],
-      },
-      {
-        type: "p",
-        text: "Serviços com operador ajudam a manter padrão e liberam a equipe do evento para outras demandas.",
-      },
-    ],
-  },
-  {
-    slug: "sobremesa-para-feiras-e-grandes-eventos",
-    title: "Sobremesa para Feiras e Grandes Eventos: Como Evitar Filas",
-    description:
-      "Estratégias para alto volume de atendimento em feiras, lançamentos e eventos com grande circulação em Campinas e RMC.",
-    date: "2026-06-24",
-    tags: ["feiras", "grandes eventos", "fluxo"],
-    content: [
-      {
-        type: "p",
-        text: "Em feiras e grandes eventos, a experiência precisa ser rápida e repetível. O segredo é operação: posição, fluxo e equipe.",
-      },
-      { type: "h2", text: "O que mais impacta o tempo de fila" },
-      {
-        type: "ul",
-        items: [
-          "Ponto de atendimento visível (as pessoas decidem rápido).",
-          "Cardápio simples (poucas escolhas aceleram).",
-          "Operador treinado (padronização e velocidade).",
-        ],
-      },
-      {
-        type: "p",
-        text: "Uma máquina moderna com iluminação em LED aumenta a visibilidade e ajuda a atrair o público.",
-      },
-    ],
-  },
-  {
-    slug: "por-que-a-maquina-da-me-gusta-e-sucesso-no-seu-evento",
-    title: "Por Que a Máquina da Me Gusta é o Sucesso que Falta no Seu Próximo Evento",
-    description:
-      "O que diferencia o serviço: máquina + operador uniformizado, visual em LED, sorvete alcoólico e prova social em Campinas e região.",
-    date: "2026-06-24",
-    tags: ["conversão", "aluguel", "Campinas"],
-    content: [
-      {
-        type: "p",
-        text: "Quando você contrata uma atração de sobremesa para o evento, você não quer “mais um fornecedor”. Você quer um momento que todo mundo lembre.",
-      },
-      { type: "h2", text: "Serviço completo (sem dor de cabeça)" },
-      {
-        type: "p",
-        text: "Na Me Gusta, o aluguel obrigatoriamente inclui a máquina e um funcionário uniformizado. Isso garante padrão, higiene, agilidade e segurança no atendimento.",
-      },
-      { type: "h2", text: "Visual e tecnologia que chamam atenção" },
-      {
-        type: "p",
-        text: "A máquina moderna com iluminação em LED deixa o espaço sofisticado, instagramável e com cara de evento premium.",
-      },
-      { type: "h2", text: "Diferencial para festas adultas" },
-      {
-        type: "p",
-        text: "Para casamentos e corporativos, a opção de sorvete alcoólico vira assunto — e ajuda a criar uma experiência exclusiva.",
-      },
-    ],
-  },
-];
+export const blogPosts: BlogPost[] = generatedPosts as BlogPost[];
 
 export function getBlogPost(slug: string) {
   return blogPosts.find((p) => p.slug === slug) ?? null;
 }
 
+export function getSortedBlogPosts() {
+  return blogPosts
+    .map((post, index) => ({ post, index }))
+    .sort((a, b) => {
+      if (a.post.date === b.post.date) return a.index - b.index;
+      return a.post.date < b.post.date ? 1 : -1;
+    })
+    .map(({ post }) => post);
+}
+
+export function getLatestBlogPosts(limit = 3) {
+  return getSortedBlogPosts().slice(0, limit);
+}

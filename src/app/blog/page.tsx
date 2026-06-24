@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { blogPosts } from "@/lib/blog";
+import { getSortedBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
-  const posts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const posts = getSortedBlogPosts();
 
   return (
     <div className="flex-1 bg-[radial-gradient(1200px_600px_at_15%_0%,var(--mg-cream),transparent_70%),radial-gradient(900px_420px_at_90%_15%,rgba(229,58,134,0.14),transparent_60%),linear-gradient(180deg,#fffaf0,#ffffff)]">
-      <header className="mx-auto w-full max-w-6xl px-5 py-10">
+      <header className="mx-auto w-full max-w-[1600px] px-5 py-12 2xl:px-10">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--mg-brown)] hover:underline"
@@ -27,16 +27,33 @@ export default function BlogIndexPage() {
           Conteúdo prático sobre sobremesas e eventos em Campinas e Região Metropolitana:
           planejamento, tendências e dicas para aumentar a experiência dos convidados.
         </p>
+        <div className="mt-5 inline-flex rounded-full bg-[rgba(110,63,167,0.12)] px-4 py-2 text-xs font-extrabold text-[var(--mg-brown)]">
+          Conteúdo editorial + automação com agente de IA
+        </div>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-5 pb-14">
-        <div className="grid gap-4 md:grid-cols-2">
+      <main className="mx-auto w-full max-w-[1600px] px-5 pb-16 2xl:px-10">
+        <div className="grid gap-5 lg:grid-cols-2 2xl:grid-cols-3">
           {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group rounded-2xl border border-[var(--mg-border)] bg-white p-6 shadow-[var(--mg-shadow)] transition-transform hover:translate-y-[-2px]"
+              className="group rounded-[28px] border border-[var(--mg-border)] bg-white p-6 shadow-[var(--mg-shadow)] transition-transform hover:translate-y-[-2px]"
             >
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-[rgba(229,58,134,0.10)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
+                  {post.category === "me-gusta"
+                    ? "Me Gusta"
+                    : post.category === "guide"
+                      ? "Guia"
+                      : "Tendência"}
+                </span>
+                {post.isAutomated ? (
+                  <span className="rounded-full bg-[rgba(78,197,106,0.16)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
+                    IA
+                  </span>
+                ) : null}
+              </div>
               <div className="text-xs font-semibold text-[color:rgba(31,20,15,0.7)]">
                 {new Date(post.date).toLocaleDateString("pt-BR")}
               </div>
@@ -56,6 +73,9 @@ export default function BlogIndexPage() {
                   </span>
                 ))}
               </div>
+              <div className="mt-5 text-xs font-semibold text-[color:rgba(31,20,15,0.62)]">
+                {post.sources.length} fonte(s) relacionada(s)
+              </div>
             </Link>
           ))}
         </div>
@@ -63,4 +83,3 @@ export default function BlogIndexPage() {
     </div>
   );
 }
-

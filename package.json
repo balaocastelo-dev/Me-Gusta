@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "blog:generate": "node ./scripts/blog-agent.mjs"
   },
   "dependencies": {
     "next": "16.2.9",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Image from "next/image";
 import { blogPosts, getBlogPost } from "@/lib/blog";
 import { buildWhatsappUrl, site } from "@/lib/site";
 
@@ -27,10 +28,10 @@ export function generateMetadata({
       url: `/blog/${post.slug}`,
       images: [
         {
-          url: "/media/sorvete-americano-pistache-evento-campinas.webp",
+          url: post.featuredImage,
           width: 765,
           height: 1024,
-          alt: "Sorvete americano em evento",
+          alt: post.title,
         },
       ],
     },
@@ -65,13 +66,27 @@ export default function BlogPostPage({
 
   return (
     <div className="flex-1 bg-[radial-gradient(900px_420px_at_15%_0%,var(--mg-cream),transparent_70%),linear-gradient(180deg,#fffaf0,#ffffff)]">
-      <header className="mx-auto w-full max-w-3xl px-5 py-10">
+      <header className="mx-auto w-full max-w-5xl px-5 py-10 2xl:max-w-6xl">
         <Link
           href="/blog"
           className="text-sm font-semibold text-[var(--mg-brown)] hover:underline"
         >
           Voltar para o blog
         </Link>
+        <div className="mt-5 flex flex-wrap gap-2">
+          <span className="rounded-full bg-[rgba(229,58,134,0.10)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
+            {post.category === "me-gusta"
+              ? "Me Gusta"
+              : post.category === "guide"
+                ? "Guia"
+                : "Tendência"}
+          </span>
+          {post.isAutomated ? (
+            <span className="rounded-full bg-[rgba(78,197,106,0.16)] px-3 py-1 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[var(--mg-brown)]">
+              Gerado com IA
+            </span>
+          ) : null}
+        </div>
         <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-[var(--mg-brown)] md:text-4xl">
           {post.title}
         </h1>
@@ -82,9 +97,19 @@ export default function BlogPostPage({
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-3xl px-5 pb-14">
+      <main className="mx-auto grid w-full max-w-5xl gap-6 px-5 pb-14 lg:grid-cols-[minmax(0,1fr)_320px] 2xl:max-w-6xl">
         <article className="rounded-2xl border border-[var(--mg-border)] bg-white p-6 shadow-[var(--mg-shadow)] md:p-9">
-          <p className="text-[color:rgba(31,20,15,0.78)]">{post.description}</p>
+          <div className="overflow-hidden rounded-[24px] border border-[var(--mg-border)]">
+            <Image
+              src={post.featuredImage}
+              alt={post.title}
+              width={1024}
+              height={1024}
+              className="h-auto w-full object-cover"
+            />
+          </div>
+
+          <p className="mt-6 text-[color:rgba(31,20,15,0.78)]">{post.description}</p>
 
           <div className="mt-8 space-y-4">
             {post.content.map((block, idx) => {
@@ -141,8 +166,42 @@ export default function BlogPostPage({
             </div>
           </div>
         </article>
+
+        <aside className="flex h-fit flex-col gap-4">
+          <div className="rounded-2xl border border-[var(--mg-border)] bg-white p-5 shadow-[var(--mg-shadow)]">
+            <div className="text-sm font-extrabold text-[var(--mg-brown)]">Fontes</div>
+            <div className="mt-4 flex flex-col gap-3">
+              {post.sources.map((source) => (
+                <a
+                  key={`${source.title}-${source.url}`}
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-2xl bg-[linear-gradient(135deg,var(--mg-cream-2),#ffffff)] px-4 py-3 text-sm font-semibold text-[var(--mg-brown)]"
+                >
+                  {source.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-[var(--mg-border)] bg-white p-5 shadow-[var(--mg-shadow)]">
+            <div className="text-sm font-extrabold text-[var(--mg-brown)]">
+              Tags principais
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-[rgba(110,63,167,0.10)] px-3 py-1 text-xs font-bold text-[var(--mg-brown)]"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </aside>
       </main>
     </div>
   );
 }
-
