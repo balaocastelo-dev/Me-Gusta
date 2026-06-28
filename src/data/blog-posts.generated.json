@@ -1,5 +1,57 @@
 [
   {
+    "slug": "noticias-de-gastronomia-2026-06-28",
+    "title": "Notícias e Tendências da Gastronomia em Destaque",
+    "description": "Atualização automática com notícias e tendências do universo gastronômico, reunindo temas que inspiram experiências mais marcantes.",
+    "date": "2026-06-28",
+    "tags": [
+      "gastronomia",
+      "tendências",
+      "sobremesas",
+      "mercado"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
+    "sources": [
+      {
+        "title": "RSS de gastronomia",
+        "url": ""
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "O blog da Me Gusta acompanha automaticamente fontes de notícias gastronômicas para destacar novidades que influenciam sabor, apresentação e experiência."
+      },
+      {
+        "type": "h2",
+        "text": "Acompanhamento contínuo do setor"
+      },
+      {
+        "type": "p",
+        "text": "Quando o feed não retorna uma notícia nova no momento da atualização, a página mantém um post informativo de apoio até a próxima captura automática."
+      },
+      {
+        "type": "h2",
+        "text": "Foco do conteúdo"
+      },
+      {
+        "type": "p",
+        "text": "As atualizações priorizam gastronomia, sobremesas, mercado food, tendências de consumo e referências que ajudam a compor eventos mais interessantes."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Novidades do setor gastronômico.",
+          "Tendências de sobremesas e consumo.",
+          "Referências úteis para festas, casamentos e eventos."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "assista-ao-jogo-do-brasil-nos-espacos-de-gastronomia-do-rj",
     "title": "Assista ao jogo do Brasil nos espaços de gastronomia do RJ",
     "description": "Assista ao jogo do Brasil nos espaços de gastronomia do RJ",
