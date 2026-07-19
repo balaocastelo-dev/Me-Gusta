@@ -1,5 +1,59 @@
 [
   {
+    "slug": "entre-o-doce-e-o-amargo-das-chamadas-gastronomias-sociais",
+    "title": "Entre o doce e o amargo das chamadas gastronomias sociais",
+    "description": "Entre o doce e o amargo das chamadas gastronomias sociais",
+    "date": "2026-07-17",
+    "tags": [
+      "gastronomia",
+      "sobremesas"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/sorvete-americano-pistache-evento-campinas.webp",
+    "sources": [
+      {
+        "title": "Brasil de Fato",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNamJKeXdIQTlMbmNYTWRBS0NKMWQ3aE05SWpZQjl4N3hQM1lNZkhEb0xZam1jckJSWFhkWjdoLVFfMjh5WXhqSDdyZGFPcl90Wk16UVhIbTZhcld4dXBxZ3lpNUgxQ0NoTGw5ZlY3dEpzUm9uTXluYkg2NVhMa0lRT1NHWDJCaXZKQkk2d0Y4NlA3ZzQycjdOc2FuaUxsNEhYLVU4?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Entre o doce e o amargo das chamadas gastronomias sociais"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por Brasil de Fato destaca o tema \"Entre o doce e o amargo das chamadas gastronomias sociais\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Entre o doce e o amargo das chamadas gastronomias sociais Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "os-10-sabores-de-pizza-mais-pesquisados-pelos-brasileiros",
     "title": "Os 10 sabores de pizza mais pesquisados pelos brasileiros",
     "description": "Os 10 sabores de pizza mais pesquisados pelos brasileiros",
