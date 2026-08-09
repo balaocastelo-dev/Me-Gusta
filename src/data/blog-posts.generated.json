@@ -1,5 +1,58 @@
 [
   {
+    "slug": "maior-evento-de-chocolate-bean-to-bar-do-brasil-acontece-em-sao-paulo",
+    "title": "Maior evento de chocolate bean to bar do Brasil acontece em São Paulo",
+    "description": "Maior evento de chocolate bean to bar do Brasil acontece em São Paulo",
+    "date": "2026-08-06",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
+    "sources": [
+      {
+        "title": "CNN Brasil",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOdDhKZGVaTi1iT052V2ZXUHlqZ2VDRFhEWXNWTjI5TUlleWRhT0NPaGFQQkNNRzZIS2RDX0EwTWhGaTB2aEk0QmNyTGwxQ1R0ckFYZVZuWnZQRzZwSzh0Zk5kdGV6YllJeVlNTEtsWktQVU54VVp3ZEVPWVc0RFpEb2tFY1NLLW03blprOURCQzJsb0ZFN1dpVUhkV0swd2x4VWlxTzk4dkxRQ1VKNTZzNGk4VndXYUZEUkQzNGFGTWNITTNEalB2MDZR?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Maior evento de chocolate bean to bar do Brasil acontece em São Paulo"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por CNN Brasil destaca o tema \"Maior evento de chocolate bean to bar do Brasil acontece em São Paulo\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Maior evento de chocolate bean to bar do Brasil acontece em São Paulo Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "masterchef-brasil-recebe-leo-salles-para-desafio-de-gastronomia-molecular",
     "title": "“MasterChef Brasil” recebe Leo Salles para desafio de gastronomia molecular",
     "description": "“MasterChef Brasil” recebe Leo Salles para desafio de gastronomia molecular",
