@@ -1,5 +1,58 @@
 [
   {
+    "slug": "viagem-gastronomia-roteiros-nacionais-e-internacionais",
+    "title": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
+    "description": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
+    "date": "2026-08-11",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "CNN Brasil",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORTF0UWY0Tk1zcFZOVDYwQmxaa1JoTGpJdm1aci1QTVlZZ25WWHJiN053OTZFUmhGWFlPbGhaYmpyZjdBaWp4cnpvM1pIQzg3RUo2eDVWT3NoT1hxSnFHWmNpbmxPU0lVWmRRb042Ty1md254WmR3UFJHSDA1enBtOW8tQXJSR1NUTXVnbk5CaTFVMEdVWTVDakNpbTFIbk5HUXJiNEJ6ZmpnRGpGQmRGZHIwWkx1VldoYXFGczl5WU1adWh2TzZj?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por CNN Brasil destaca o tema \"Viagem & Gastronomia | Roteiros Nacionais e Internacionais\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "rio-gastronomia-2026-o-maior-festival-gastronomico-do-brasil-volta-a-movimentar-a-cultura-e-os-sabores-da-cidade-maravilhosa",
     "title": "Rio Gastronomia 2026: o maior festival gastronômico do Brasil volta a movimentar a cultura e os sabores da Cidade Maravilhosa",
     "description": "Rio Gastronomia 2026: o maior festival gastronômico do Brasil volta a movimentar a cultura e os sabores da Cidade Maravilhosa",
