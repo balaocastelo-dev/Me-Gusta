@@ -1,5 +1,58 @@
 [
   {
+    "slug": "viagem-gastronomia-roteiros-nacionais-e-internacionais-2",
+    "title": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
+    "description": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
+    "date": "2026-08-12",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "CNN Brasil",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUGl6eXhiYzhOeWppaDRQMGthXzlrVUJ4SDBYcjVTbDNDRFcybzR5cUt0SjZvOXNQbGFPZGhuXzVjSmxDdjBsQmRsOGpLQXpSY1NscWZNU1lIcXR6WkhuSXZnc2ZXRXFEYXhsMFFEY2h0S1h6eU0zNXZMd1BBcWpsZGZhTldVMGdqTXJpSkZhMFBwMGVXd1lDLVBaZU9icmpMUTR6NUE1UDE5SVRuZ2E2dm9Kell3UHN6MWdWMlZPbG1RTjFvR0JZVzNSZw?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por CNN Brasil destaca o tema \"Viagem & Gastronomia | Roteiros Nacionais e Internacionais\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "viagem-gastronomia-roteiros-nacionais-e-internacionais",
     "title": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
     "description": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
