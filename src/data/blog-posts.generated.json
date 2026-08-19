@@ -1,5 +1,58 @@
 [
   {
+    "slug": "gastronomia-brasileira-ganha-destaque-internacional-com-acao-da-embratur-em-evento-da-onu-turismo",
+    "title": "Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo",
+    "description": "Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo",
+    "date": "2026-08-16",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
+    "sources": [
+      {
+        "title": "O Mundo Diplomático",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQeWJ4M2RCWVpla0VYX01HRFdHcVU0QTRTVTh3VHZnSkVOY1VmNFNtM0N1ODRHTUo5Tm5IVXI4QXYzeWxVdnZvYllYRWRrTXdaUzhWNlM5U2RUaWRZYlVpSmZwankxNWZTTUhRa0h4b3plOUVFb0xVYnFCS21Gd1I5NGpTanN2aXVWTFU2ZHBaX2hIWmRsYndvdnFYdEptVU1udnRlX21hOTlHQ0NaVGFpYlVobzRsSzVyZHR6eFp6b3JwZDhiY2ttd1FtU2tVZGJaRjJmeE1xdWN4UQ?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por O Mundo Diplomático destaca o tema \"Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "brasil-mostra-forca-da-gastronomia-em-encontro-da-onu-turismo-em-sao-paulo",
     "title": "Brasil mostra força da gastronomia em encontro da ONU Turismo em São Paulo",
     "description": "Brasil mostra força da gastronomia em encontro da ONU Turismo em São Paulo",
@@ -3111,49 +3164,6 @@
       {
         "type": "p",
         "text": "Serviços com operador ajudam a manter padrão e liberam a equipe do evento para outras demandas."
-      }
-    ]
-  },
-  {
-    "slug": "sobremesa-para-feiras-e-grandes-eventos",
-    "title": "Sobremesa para Feiras e Grandes Eventos: Como Evitar Filas",
-    "description": "Estratégias para alto volume de atendimento em feiras, lançamentos e eventos com grande circulação em Campinas e RMC.",
-    "date": "2026-06-24",
-    "tags": [
-      "feiras",
-      "grandes eventos",
-      "fluxo"
-    ],
-    "category": "news",
-    "isAutomated": false,
-    "isMeGustaFeature": false,
-    "featuredImage": "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
-    "sources": [
-      {
-        "title": "Pesquisa editorial Me Gusta sobre operação em grandes eventos",
-        "url": "https://me-gusta-seven.vercel.app/blog"
-      }
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Em feiras e grandes eventos, a experiência precisa ser rápida e repetível. O segredo é operação: posição, fluxo e equipe."
-      },
-      {
-        "type": "h2",
-        "text": "O que mais impacta o tempo de fila"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Ponto de atendimento visível (as pessoas decidem rápido).",
-          "Cardápio simples (poucas escolhas aceleram).",
-          "Operador treinado (padronização e velocidade)."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Uma máquina moderna com iluminação em LED aumenta a visibilidade e ajuda a atrair o público."
       }
     ]
   }
