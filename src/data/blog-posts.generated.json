@@ -1,5 +1,58 @@
 [
   {
+    "slug": "1-festival-brasa-brasil-chega-a-ouro-preto-em-setembro",
+    "title": "1º Festival Brasa Brasil chega a Ouro Preto em setembro",
+    "description": "1º Festival Brasa Brasil chega a Ouro Preto em setembro",
+    "date": "2026-08-19",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "Agência Primaz",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQclJLdzdmVDZBTDUyaVo2dGxLRWZEUGhyNHdueGRNZHNUalFyQXZZYlJrZVItSDRCR1R5RVFveC1VWnpsTmlVM1Vld3phdmUtVWNJa0xTWC13c2dtUXdjZTk4a1hzSVAwM21YRFM2aVJqWmUtZ01NME40VlByYTdTTFVmdnpkODdHRlZTMVEtc2haR3RRQXJj?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "1º Festival Brasa Brasil chega a Ouro Preto em setembro"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por Agência Primaz destaca o tema \"1º Festival Brasa Brasil chega a Ouro Preto em setembro\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "1º Festival Brasa Brasil chega a Ouro Preto em setembro Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "gastronomia-brasileira-ganha-destaque-internacional-com-acao-da-embratur-em-evento-da-onu-turismo",
     "title": "Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo",
     "description": "Gastronomia brasileira ganha destaque internacional com ação da Embratur em evento da ONU Turismo",
@@ -3121,49 +3174,6 @@
           "Agradável para crianças e adultos",
           "Combina com coberturas e personalizações"
         ]
-      }
-    ]
-  },
-  {
-    "slug": "confraternizacao-corporativa-sucesso",
-    "title": "Dicas para Organizar uma Confraternização Corporativa de Sucesso",
-    "description": "Checklist de produção e experiência para empresas em Campinas e região: horários, público, logística e serviço.",
-    "date": "2026-06-24",
-    "tags": [
-      "corporativo",
-      "B2B",
-      "eventos"
-    ],
-    "category": "guide",
-    "isAutomated": false,
-    "isMeGustaFeature": false,
-    "featuredImage": "/media/maquina-sorvete-operador-uniformizado-campinas.webp",
-    "sources": [
-      {
-        "title": "Pesquisa editorial Me Gusta sobre confraternizações corporativas",
-        "url": "https://me-gusta-seven.vercel.app/blog"
-      }
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Confraternização corporativa boa é aquela que flui: sem filas, com serviço consistente e com algo marcante para a equipe lembrar."
-      },
-      {
-        "type": "h2",
-        "text": "Checklist rápido"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Defina o pico de consumo (após palestra, após almoço, após cerimônia).",
-          "Garanta ponto de energia e área de atendimento segura.",
-          "Escolha uma atração fácil de amar (sobremesa gelada costuma ser sucesso)."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Serviços com operador ajudam a manter padrão e liberam a equipe do evento para outras demandas."
       }
     ]
   }
