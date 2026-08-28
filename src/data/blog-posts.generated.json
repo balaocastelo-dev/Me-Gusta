@@ -1,5 +1,58 @@
 [
   {
+    "slug": "salvador-tem-seis-pizzarias-entre-as-100-melhores-do-brasil-em-ranking-de-2026",
+    "title": "Salvador tem seis pizzarias entre as 100 melhores do Brasil em ranking de 2026",
+    "description": "Salvador tem seis pizzarias entre as 100 melhores do Brasil em ranking de 2026",
+    "date": "2026-08-28",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "Revista Let's Go Bahia",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVmxqd0pYWml1Q2MyOFZCOE9qZGpfQ09zOHl5RDJWSlpNWWhnQ1hKOWRXVzVKSWIzTC1nNXRuN0dlVGE1LU0yRkRWRnItUGpnMENMWGc1blZLMlA0N0V3XzFxZnFmcjZTTXRPLWRqRmdqS1RfWDlqbGpacHNHTnJQV2R5dDRpRFFGR1NKMFQ5ejNzdVBpeFhWX1N4dk1lZHp4T3d0TnVjVVJ3STAwX1Q0eFZmUEJYaGd5ZlF2TTJBUQ?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Salvador tem seis pizzarias entre as 100 melhores do Brasil em ranking de 2026"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por Revista Let's Go Bahia destaca o tema \"Salvador tem seis pizzarias entre as 100 melhores do Brasil em ranking de 2026\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Salvador tem seis pizzarias entre as 100 melhores do Brasil em ranking de 2026 Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "turismo-de-luxo-no-brasil-faturou-r-3-3-bi-veja-destinos-mais-procurados",
     "title": "Turismo de luxo no Brasil faturou R$ 3,3 bi: veja destinos mais procurados",
     "description": "Turismo de luxo no Brasil faturou R$ 3,3 bi: veja destinos mais procurados",
@@ -3124,58 +3177,6 @@
           "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
           "Criar experiências mais fotogênicas e memoráveis para os convidados.",
           "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "noticias-de-gastronomia-2026-06-28",
-    "title": "Notícias e Tendências da Gastronomia em Destaque",
-    "description": "Atualização automática com notícias e tendências do universo gastronômico, reunindo temas que inspiram experiências mais marcantes.",
-    "date": "2026-06-28",
-    "tags": [
-      "gastronomia",
-      "tendências",
-      "sobremesas",
-      "mercado"
-    ],
-    "category": "news",
-    "isAutomated": true,
-    "isMeGustaFeature": false,
-    "featuredImage": "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
-    "sources": [
-      {
-        "title": "RSS de gastronomia",
-        "url": ""
-      }
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "O blog da Me Gusta acompanha automaticamente fontes de notícias gastronômicas para destacar novidades que influenciam sabor, apresentação e experiência."
-      },
-      {
-        "type": "h2",
-        "text": "Acompanhamento contínuo do setor"
-      },
-      {
-        "type": "p",
-        "text": "Quando o feed não retorna uma notícia nova no momento da atualização, a página mantém um post informativo de apoio até a próxima captura automática."
-      },
-      {
-        "type": "h2",
-        "text": "Foco do conteúdo"
-      },
-      {
-        "type": "p",
-        "text": "As atualizações priorizam gastronomia, sobremesas, mercado food, tendências de consumo e referências que ajudam a compor eventos mais interessantes."
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Novidades do setor gastronômico.",
-          "Tendências de sobremesas e consumo.",
-          "Referências úteis para festas, casamentos e eventos."
         ]
       }
     ]
