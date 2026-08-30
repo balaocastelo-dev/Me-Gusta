@@ -1,5 +1,57 @@
 [
   {
+    "slug": "noticias-de-gastronomia-2026-08-30",
+    "title": "Notícias e Tendências da Gastronomia em Destaque",
+    "description": "Atualização automática com notícias e tendências do universo gastronômico, reunindo temas que inspiram experiências mais marcantes.",
+    "date": "2026-08-30",
+    "tags": [
+      "gastronomia",
+      "tendências",
+      "sobremesas",
+      "mercado"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-feira-evento-grande-campinas.webp",
+    "sources": [
+      {
+        "title": "RSS de gastronomia",
+        "url": ""
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "O blog da Me Gusta acompanha automaticamente fontes de notícias gastronômicas para destacar novidades que influenciam sabor, apresentação e experiência."
+      },
+      {
+        "type": "h2",
+        "text": "Acompanhamento contínuo do setor"
+      },
+      {
+        "type": "p",
+        "text": "Quando o feed não retorna uma notícia nova no momento da atualização, a página mantém um post informativo de apoio até a próxima captura automática."
+      },
+      {
+        "type": "h2",
+        "text": "Foco do conteúdo"
+      },
+      {
+        "type": "p",
+        "text": "As atualizações priorizam gastronomia, sobremesas, mercado food, tendências de consumo e referências que ajudam a compor eventos mais interessantes."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Novidades do setor gastronômico.",
+          "Tendências de sobremesas e consumo.",
+          "Referências úteis para festas, casamentos e eventos."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "rio-gastronomia-2026-veja-as-atracoes-musicais-por-dia-restaurantes-participantes-e-como-comprar-ingressos",
     "title": "Rio Gastronomia 2026: veja as atrações musicais por dia, restaurantes participantes e como comprar ingressos",
     "description": "Rio Gastronomia 2026: veja as atrações musicais por dia, restaurantes participantes e como comprar ingressos",
@@ -3114,59 +3166,6 @@
       {
         "type": "p",
         "text": "Restaurantes alagoanos figuram entre os 100 melhores do Brasil e reforçam força da gastronomia do estado Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
-      },
-      {
-        "type": "h2",
-        "text": "Como essa tendência pode inspirar experiências mais especiais"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
-          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
-          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "lemi-em-curitiba-tecnica-apurada-e-atmosfera-casual-dividem-protagonismo",
-    "title": "Lemí, em Curitiba, técnica apurada e atmosfera casual dividem protagonismo",
-    "description": "Lemí, em Curitiba, técnica apurada e atmosfera casual dividem protagonismo",
-    "date": "2026-06-30",
-    "tags": [
-      "gastronomia"
-    ],
-    "category": "news",
-    "isAutomated": true,
-    "isMeGustaFeature": false,
-    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
-    "sources": [
-      {
-        "title": "CNN Brasil",
-        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWkpmdFRGSkgyLXctX3pFU2RIbFlqV1FCQi1BbFJFd3FsbDlDZVlmLVhFZUdWWXdIMHd5ZEd5ams3VTNDaVNLV3NoSjdvalZRb2NRZHllUGhvN29tNlY2cmhham0tU1N0NTVkck9uQ1pEcjktRnljSU8xSFJ1Tnlwd0RqT3FiQjY2VVJiZmg0N0NYbUNlSnJLa2M3R3dSUzZJWGV1NFFkTnVBX1BFcVh4LWFJb2htak0yTEpDQmpkWVZLZ2ctTkN0SEtkX1RZZw?oc=5"
-      }
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Lemí, em Curitiba, técnica apurada e atmosfera casual dividem protagonismo"
-      },
-      {
-        "type": "h2",
-        "text": "O que está acontecendo"
-      },
-      {
-        "type": "p",
-        "text": "A notícia publicada por CNN Brasil destaca o tema \"Lemí, em Curitiba, técnica apurada e atmosfera casual dividem protagonismo\"."
-      },
-      {
-        "type": "h2",
-        "text": "Por que essa novidade chama atenção"
-      },
-      {
-        "type": "p",
-        "text": "Lemí, em Curitiba, técnica apurada e atmosfera casual dividem protagonismo Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
       },
       {
         "type": "h2",
