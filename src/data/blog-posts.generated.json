@@ -1,5 +1,58 @@
 [
   {
+    "slug": "korea-fest-brasil-agita-sao-paulo-com-k-pop-e-gastronomia",
+    "title": "Korea Fest Brasil agita São Paulo com K-Pop e gastronomia",
+    "description": "Korea Fest Brasil agita São Paulo com K-Pop e gastronomia",
+    "date": "2026-10-09",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "Portal ABC do ABC",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1TV3ZCbVlKVTB3Uy1NeFlZZWl0MDltU0tmdnB2c0ZXTmJyd3pkck1EZ2NxMS1rTVcwQ0FuSkt0bUU0LXN3VEktdldJbVpLVDAzM0pRMWs0b1dMRVBjUnJudEE2aWdwMHNoenN2Vk5yendjMWxlbmlUMVRsMTQ?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Korea Fest Brasil agita São Paulo com K-Pop e gastronomia"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por Portal ABC do ABC destaca o tema \"Korea Fest Brasil agita São Paulo com K-Pop e gastronomia\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Korea Fest Brasil agita São Paulo com K-Pop e gastronomia Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "mayu-brasileiro-celebra-a-gastronomia-do-sul-do-brasil-com-chef-convidado-marcelo-schambeck",
     "title": "Mayú Brasileiro celebra a gastronomia do Sul do Brasil com chef convidado Marcelo Schambeck",
     "description": "Mayú Brasileiro celebra a gastronomia do Sul do Brasil com chef convidado Marcelo Schambeck",
@@ -3099,59 +3152,6 @@
       {
         "title": "CNN Brasil",
         "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUGl6eXhiYzhOeWppaDRQMGthXzlrVUJ4SDBYcjVTbDNDRFcybzR5cUt0SjZvOXNQbGFPZGhuXzVjSmxDdjBsQmRsOGpLQXpSY1NscWZNU1lIcXR6WkhuSXZnc2ZXRXFEYXhsMFFEY2h0S1h6eU0zNXZMd1BBcWpsZGZhTldVMGdqTXJpSkZhMFBwMGVXd1lDLVBaZU9icmpMUTR6NUE1UDE5SVRuZ2E2dm9Kell3UHN6MWdWMlZPbG1RTjFvR0JZVzNSZw?oc=5"
-      }
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais"
-      },
-      {
-        "type": "h2",
-        "text": "O que está acontecendo"
-      },
-      {
-        "type": "p",
-        "text": "A notícia publicada por CNN Brasil destaca o tema \"Viagem & Gastronomia | Roteiros Nacionais e Internacionais\"."
-      },
-      {
-        "type": "h2",
-        "text": "Por que essa novidade chama atenção"
-      },
-      {
-        "type": "p",
-        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
-      },
-      {
-        "type": "h2",
-        "text": "Como essa tendência pode inspirar experiências mais especiais"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
-          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
-          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "viagem-gastronomia-roteiros-nacionais-e-internacionais",
-    "title": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
-    "description": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
-    "date": "2026-08-11",
-    "tags": [
-      "gastronomia"
-    ],
-    "category": "news",
-    "isAutomated": true,
-    "isMeGustaFeature": false,
-    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
-    "sources": [
-      {
-        "title": "CNN Brasil",
-        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORTF0UWY0Tk1zcFZOVDYwQmxaa1JoTGpJdm1aci1QTVlZZ25WWHJiN053OTZFUmhGWFlPbGhaYmpyZjdBaWp4cnpvM1pIQzg3RUo2eDVWT3NoT1hxSnFHWmNpbmxPU0lVWmRRb042Ty1md254WmR3UFJHSDA1enBtOW8tQXJSR1NUTXVnbk5CaTFVMEdVWTVDakNpbTFIbk5HUXJiNEJ6ZmpnRGpGQmRGZHIwWkx1VldoYXFGczl5WU1adWh2TzZj?oc=5"
       }
     ],
     "content": [
