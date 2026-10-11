@@ -1,5 +1,58 @@
 [
   {
+    "slug": "pinotage-a-uva-que-o-brasil-ainda-nao-aprendeu-a-pedir",
+    "title": "Pinotage: a uva que o Brasil ainda não aprendeu a pedir",
+    "description": "Pinotage: a uva que o Brasil ainda não aprendeu a pedir",
+    "date": "2026-10-11",
+    "tags": [
+      "gastronomia"
+    ],
+    "category": "news",
+    "isAutomated": true,
+    "isMeGustaFeature": false,
+    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
+    "sources": [
+      {
+        "title": "G1",
+        "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNT2Z5NWNDa0Fod1JmUmY2QVgwV2F3bW5hLVdkRjhfX2dBcWtHOE9fVDRRZEppZGN5S3V1TDltWVpIRFJyTjljQkw0X0szU0NMeDF4U0NEWnFCbGFvdjBDTW55bXBOOGtKTlUwbVRkUEtqVVBPMEN4bGtscWQyTkZjWF9xVlMzX281S082Qld1X2d3Q3lSNGNhWVlZQkJkczZCSGdEOWtLUTZGTjh6Z21uVGE4b21QTG1QSmZGYzdBTGdDaWtVSHZyWWMwdVJ0ZFVIa0c2cUlGWVBtb01wVC1rcmZDMmh3YklnRlBvZW1IX2tSbFVCT2hPYk9WVk81QkpkTFR1cWF6b3NKS0NRSHRndmh0YnhzR1XSAZcCQVVfeXFMTU9meTVjQ2tBaHdSZlJmNkFYMFdhd21uYS1XZEY4X19nQXFrRzhPX1Q0UWRKaWRjeUt1dUw5bVlaSERSck45Y0JMNF9LM1NDTHgxeFNDRFpxQmxhb3YwQ01ueW1wTjhrSk5VMG1UZFBLalVQTzBDeGxrbHFkMk5GY1hfcVZTM19vNUtPNkJXdV9nd0N5UjRjYVlZWUJCZHM2QkhnRDlrS1E2Rk44emdtblRhOG9tUExtUEpmRmM3QUxnQ2lrVUh2clljMHVSdGRVSGtHNnFJRllQbW9NcFQta3JmQzJod2JJZ0ZQb2VtSF9rUmxVQk9oT2JPVlZPNUJKZExUdXFhem9zSktDUUh0Z3ZodGJ4c0dV?oc=5"
+      }
+    ],
+    "content": [
+      {
+        "type": "p",
+        "text": "Pinotage: a uva que o Brasil ainda não aprendeu a pedir"
+      },
+      {
+        "type": "h2",
+        "text": "O que está acontecendo"
+      },
+      {
+        "type": "p",
+        "text": "A notícia publicada por G1 destaca o tema \"Pinotage: a uva que o Brasil ainda não aprendeu a pedir\"."
+      },
+      {
+        "type": "h2",
+        "text": "Por que essa novidade chama atenção"
+      },
+      {
+        "type": "p",
+        "text": "Pinotage: a uva que o Brasil ainda não aprendeu a pedir Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
+      },
+      {
+        "type": "h2",
+        "text": "Como essa tendência pode inspirar experiências mais especiais"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
+          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
+          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "korea-fest-brasil-agita-sao-paulo-com-k-pop-e-gastronomia",
     "title": "Korea Fest Brasil agita São Paulo com K-Pop e gastronomia",
     "description": "Korea Fest Brasil agita São Paulo com K-Pop e gastronomia",
@@ -3121,59 +3174,6 @@
       {
         "type": "p",
         "text": "Roxy estreia almoço musical nos fins de semana com feijoada e menu de Kátia Barbosa Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
-      },
-      {
-        "type": "h2",
-        "text": "Como essa tendência pode inspirar experiências mais especiais"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Valorizar apresentação, sabor e impacto visual no momento da sobremesa.",
-          "Criar experiências mais fotogênicas e memoráveis para os convidados.",
-          "Acompanhar o mercado gastronômico para planejar eventos com repertório atual."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "viagem-gastronomia-roteiros-nacionais-e-internacionais-2",
-    "title": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
-    "description": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais",
-    "date": "2026-08-12",
-    "tags": [
-      "gastronomia"
-    ],
-    "category": "news",
-    "isAutomated": true,
-    "isMeGustaFeature": false,
-    "featuredImage": "/media/maquina-sorvete-led-casamento-campinas.webp",
-    "sources": [
-      {
-        "title": "CNN Brasil",
-        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOUGl6eXhiYzhOeWppaDRQMGthXzlrVUJ4SDBYcjVTbDNDRFcybzR5cUt0SjZvOXNQbGFPZGhuXzVjSmxDdjBsQmRsOGpLQXpSY1NscWZNU1lIcXR6WkhuSXZnc2ZXRXFEYXhsMFFEY2h0S1h6eU0zNXZMd1BBcWpsZGZhTldVMGdqTXJpSkZhMFBwMGVXd1lDLVBaZU9icmpMUTR6NUE1UDE5SVRuZ2E2dm9Kell3UHN6MWdWMlZPbG1RTjFvR0JZVzNSZw?oc=5"
-      }
-    ],
-    "content": [
-      {
-        "type": "p",
-        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais"
-      },
-      {
-        "type": "h2",
-        "text": "O que está acontecendo"
-      },
-      {
-        "type": "p",
-        "text": "A notícia publicada por CNN Brasil destaca o tema \"Viagem & Gastronomia | Roteiros Nacionais e Internacionais\"."
-      },
-      {
-        "type": "h2",
-        "text": "Por que essa novidade chama atenção"
-      },
-      {
-        "type": "p",
-        "text": "Viagem & Gastronomia | Roteiros Nacionais e Internacionais Tendências como essa mostram como o mercado gastronômico segue valorizando experiência, apresentação e diferenciação."
       },
       {
         "type": "h2",
